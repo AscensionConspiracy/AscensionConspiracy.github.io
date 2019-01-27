@@ -1,0 +1,38 @@
+@font-face {
+  font-family: eagle;
+  src: url(fonts/EagleLake-Regular.ttf);
+}
+
+@font-face {
+  font-family: julee;
+  src: url(fonts/Julee-Regular.ttf);
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  margin: 0px;
+  background-size:cover;
+  background-position:center;
+  background-image:url(DSCF1651.JPG);
+}
+
+header {
+  background-color: transparent;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align:center;
+  font-size: 2.5rem;
+  font-family: eagle;
+  color:rgba(0,0,0,0.5);
+  mix-blend-mode: color-dodge;
+}
+
+header h1{  text-shadow: 0 0 15px #422f24;
+}
