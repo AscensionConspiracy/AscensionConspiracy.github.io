@@ -27,13 +27,26 @@ header {
   margin: 10px;
   border-radius: 10px;
 }
-
+a{text-decoration:none;}
 h1 {
   text-align:center;
   font-size: 2.5rem;
   font-family: eagle;
   color:rgba(16,17,19,0.5);
   mix-blend-mode: color-dodge;
+}
+h2 {
+  text-align:center;
+  font-size: 2.5rem;
+  font-family: julee;
+  color:rgba(16,17,19,0.5);
+  mix-blend-mode: color-dodge;
+}
+h3 {
+  text-align:center;
+  font-size: 1.5rem;
+  font-family: julee;
+  color:rgba(255,255,255,0.8);
 }
 
 header h1{  text-shadow: 0 0 15px #422f24;

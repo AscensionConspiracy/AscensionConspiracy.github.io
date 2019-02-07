@@ -8,8 +8,165 @@
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    .bot-ref {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    @keyframes pulse {
+      0% {
+        filter: hue-rotate(0deg);
+        transform: scale(1);
+
+      }
+
+      50% {
+        transform: scale(1.05);
+      }
+
+      100% {
+        filter: hue-rotate(360deg);
+        transform: scale(1);
+
+      }
+
+
+    }
+
+    @keyframes pulse2 {
+      0% {
+        filter: hue-rotate(0deg);
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(0.95);
+      }
+
+      100% {
+        filter: hue-rotate(360deg);
+        transform: scale(1);
+      }
+
+
+    }
+    }
+
+    @keyframes pulse3 {
+      0% {
+        filter: hue-rotate(0deg);
+        transform: scale(1)rotate(5deg);
+      }
+
+      50% {
+        transform: scale(1.1)rotate(-10deg);
+      }
+
+      100% {
+        filter: hue-rotate(360deg);
+        transform: scale(1)rotate(5deg);
+      }
+
+
+    }
+
+    .triangle {
+      background-color: rgba(0, 0, 0, 0.2);
+      width: 100vw;
+      height: 100vw;
+      position: absolute;
+      top: -75vw;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      z-index: -1;
+      transform: rotate(45deg);
+      box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);      border-radius:50px;
+
+    }
+
+    .triangle2 {
+      filter: hue-rotate(25deg);
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+      background-color: rgba(0, 25, 50, 0.1);
+      width: 90%;
+      height: 90%;
+      margin: auto auto;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      z-index: -1;
+      transform: rotate(45deg);
+      animation-delay: 500ms;
+      animation: pulse2 3s ease infinite;
+      border-radius: 50px;
+    }
+
+    .triangle3 {
+      filter: hue-rotate(25deg);
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+      background-color: rgba(0, 25, 50, 0.1);
+      width: 90%;
+      height: 90%;
+      margin: auto auto;
+      display: flex;
+      flex-flow: column;
+      border-radius: 50px;
+
+      justify-content: center;
+      z-index: -1;
+      animation-delay: 300ms;
+      animation: pulse3 5s ease infinite;
+    }
+
     body {
-      background-image: url(DSCF1651.jpg);
+      background: linear-gradient(to top, black, transparent);
+    }
+
+    header h1 {
+      animation: pulse 5s ease infinite;
+    }
+
+    header {
+      animation: pulse 10s ease infinite;
+    }
+
+    footer {
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      width: 100vw;
+      height: 100px;
+      max-height: 100px;
+      position: fixed;
+      bottom: 0px;
+      filter: saturate(0);
+      transition: filter 500ms ease;
+    }
+
+    footer:hover {
+      filter: saturate(1);
+    }
+
+    article {
+      max-width: 90vw;
+      margin: auto auto;
+      box-shadow: 0px -5px 50px rgba(16, 17, 19, 0.5);
+      text-shadow: 0px 0px 5px rgba(16, 17, 19, 0.5);
+      background-color: rgba(250, 250, 250, 0.2);
+      padding: 20px;
+      border-radius: 4px;
+    }
+
+    .icon {
+      transition: transform 500ms ease;
+    }
+
+    .icon:hover {
+      transform: scale(1.2);
+      transition: transform 500ms ease;
     }
   </style>
 </head>
@@ -17,11 +174,45 @@
 <body>
   <header>
     <h1>Ascension Conspiracy</h1>
+    <div class="triangle">
+      <div class="triangle2">
+        <div class="triangle3">
+          <div class="triangle2">
+            <div class="triangle3">
+              <div class="triangle2">
+                <div class="triangle3">
+                  <div class="triangle2">
+                    <div class="triangle3">
+                      <div class="triangle2">
+                        <div class="triangle3"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 
+  <article class="" style="">
+    <h3>Ascension Conspiracy is the musical and performance vehicle of artist Greg Cedarbeard whose voice, or voices and compositions form the center of our musical expressions. We interweave songs in Rock, Pop, Shoegaze, Prog, Jazz with sequences
+      in Ambient, Drone, Soundscape, including visualizations and breathing exercises to guide participants in our manifestations into altered states of ecstatic bliss, off world exploration, aural healing; in this way Ascension Conspiracy is a
+      starship, not of metal, glass and plastic, but a starship of consciousness. This is old school tech of rhythm, meter, voice in a bardic way that brings forth vivid experiences in imaginal travel with only the waves of our sounds and the focus
+      of our minds. In this way Ascension Conspiracy formulates one way to manifest Mer Ka Ba. On the other hand, it's just really good music.</h3>
+  </article>
 
 
-  <footer></footer>
+  <footer style="">
+    <div style="" class="bot-ref"><a href="mailto:singedelart@gmail.com">
+        <img class="icon" src="mail.png" style="margin:auto 20px;width:32px" alt="Contact"> </a></div>
+    <div style="" class="bot-ref"><a href="https://ascensionconspiracy1.bandcamp.com/">
+        <img class="icon" src="bandcamp.png" style="margin:auto 20px;width:48px" alt="Bandcamp"> </a></div>
+    <div style="" class="bot-ref"><a href="https://www.facebook.com/ascensionconspiracy/">
+        <img class="icon" src="facebook.png" style="margin:auto 20px;width:24px" alt="Facebook"> </a></div>
+  </footer>
 
 
 </body>
