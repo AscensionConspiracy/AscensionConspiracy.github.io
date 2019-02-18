@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|ZCOOL+QingKe+HuangYou" rel="stylesheet">
+  <style>
+    h1,
+    h2,
+    h3 {
+      font-family: 'Major Mono Display', monospace;
+    }
+
+    h4,
+    p {
+      font-family: 'ZCOOL QingKe HuangYou', cursive;
+    }
+
+    .white {
+      color: whitesmoke;
+      background-color: inherit;
+    }
+
+    .inverted {
+      filter: invert(1);
+    }
+
+    .reversed {
+      text-align: right;
+    }
+
+    .centered {
+      text-align: center;
+    }
+
+    body {
+      display: flex;
+      flex-flow: column;
+      justify-content: left;
+      height: 100vh;
+      width: 100vh;
+      margin: 0px;
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .left-side {
+      width: 30vw;
+      height: 100vh;
+      background-color: black;
+      position: absolute;
+    }
+
+    .flex-centered {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+    }
+
+    .top-info {
+
+      position: relative;
+      top: 0px padding: 8px;
+      height: 30vw;
+      min-height: 20vh;
+      width: 100%;
+      background-color: black;
+    }
+
+    .bottom-info {
+      position: relative;
+      padding: 8px;
+      border-right: 4px solid black;
+      bottom: 0px;
+      min-height: 30vw;
+      height: -webkit-fill-available;
+      width: auto;
+      background-color: whitesmoke;
+    }
+    #ＧＲＥＬ{}
+
+    @keyframes wideblock {
+      0% {
+        width: 32px;
+      }
+
+      25% {
+        width: 128px;
+      }
+
+      50% {
+        width: 32px;
+      }
+
+      100% {
+        width: 32px;
+      }
+
+    }
+
+    .toggle-text {
+      animation: wideblock 3s ease infinite;
+      width: unset;
+      overflow: hidden;
+      mix-blend-mode: difference;
+      pointer-events: none;
+    }
+
+    #left {
+      transition: transform 500ms ease;
+      transform: translatex(0vw);
+
+    }
+
+    #right {
+      transition: width 500ms ease;
+      right: 0px;
+      width: 70vw;
+      left: 30vw;
+    }
+
+    .right-side {
+      position: absolute;
+      left: 30vw;
+      width: 70vw;
+      height: 100vh;
+      background-color: black;
+    }
+
+    .top-left {
+      width: 50vw;
+      background-color: black;
+      height: 60vh;
+    }
+
+    .bottom-left {
+      height: 35vh;
+      width: inherit;
+      background-color: whitesmoke;
+    }
+
+    .right-transition {
+      position: absolute;
+      right: 0px;
+      height: inherit;
+      width: 20vw;
+      background: linear-gradient(to top right, transparent 50%, slategray 50%);
+    }
+
+    .right-info {
+      height: 60vh;
+      width: 20vw;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      background: slategray;
+    }
+
+    .toggle-brick,
+    .toggle-brick-2 {
+      display: none;
+    }
+
+    .scroll-box {
+      width: inherit;
+      height: 100%;
+      overflow-y: auto;
+      background: rgba(255, 106, 0, 0.8);
+    }
+
+    ul {
+      margin: 8px;
+      padding: 8px;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: unset;
+      color: unset;
+      transition: transform 500ms ease;
+      transform: translatex(0px)
+    }
+
+    a:hover {
+      color: whitesmoke;
+      transform: translatex(5px);
+    }
+
+    @media screen and (max-width:680px) {
+
+
+      .toggle-brick {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        top: 0px;
+        left: 0px;
+        position: fixed;
+        z-index: 2;
+        background: linear-gradient(to top left, transparent 25%, whitesmoke 25%);
+        height: 64px;
+        width: 64px;
+        transition: filter 100ms ease;
+      }
+
+
+      .toggle-brick-2 {
+        display: none;
+        flex-flow: column;
+        justify-content: flex-start;
+        top: 32px;
+        left: 30vw;
+        position: fixed;
+        z-index: 2;
+        background: linear-gradient(to bottom right, transparent 25%, whitesmoke 25%, whitesmoke 50%, whitesmoke 75%, transparent 75%);
+        height: 32px;
+        width: 32px;
+        transition: filter 100ms ease;
+      }
+
+      .toggle-brick:hover {
+        filter: invert(0.5);
+        mix-blend-mode: difference;
+      }
+
+      .toggle-brick-2:hover {
+        filter: invert(0.5);
+        mix-blend-mode: difference;
+      }
+
+
+      #left {
+        transform: translatex(-30vw);
+      }
+
+      #right {
+        width: 100vw;
+        left: 0vw;
+      }
+  </style>
+
+  <script>
+    function show() {
+      document.getElementById('left').style.cssText = 'transform:translatex(0vw);width:100vw;z-index:2;';
+      document.getElementById('right').style.cssText = 'width:70vw;left:30vw;';
+      document.getElementById('open').style.cssText = 'display:none;';
+      document.getElementById('close').style.cssText = 'display:block;right:32px;position:fixed;left:unset;';
+    }
+
+    function hide() {
+      document.getElementById('left').style.cssText = 'transform:translatex(-30vw);';
+      document.getElementById('right').style.cssText = 'width:100vw;';
+      document.getElementById('open').style.cssText = 'display:block;';
+      document.getElementById('close').style.cssText = 'display:none;';
+
+
+    }
+  </script>
+</head>
+
+<body>
+  <div class="left-side" id="left">
+    <div class="toggle-brick-2" id="close" onmousedown="hide()">
+      <h1 class="white toggle-text centered">
+        <</h1> </div> <div class="top-info flex-centered">
+          <h1 class="white">You Decide</h1>
+          <h1 class="inverted reversed white">Your <i>FUTURE</i></h1>
+    </div>
+    <div class="bottom-info">
+      <div class="scroll-box reversed">
+        <ul>
+          <li><a href="">
+              <h4>END OF REALISM</h4>
+            </a></li>
+          <li><a href="">
+              <h4>THE TIME</h4>
+            </a></li>
+          <li><a href="">
+              <h4>SYPHEN</h4>
+            </a></li>
+          <li><a href="">
+              <h4>MICHAEL GREEN</h4>
+            </a></li>
+          <li><a href="">
+              <h4>SYNERGETICS</h4>
+            </a></li>
+          <li><a href="">
+              <h4>LORENTZ-O</h4>
+            </a></li>
+          <li><a href=""></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="toggle-brick" id="open" onmousedown="show()">
+    <h1 class="white toggle-text centered">|||||</h1>
+  </div>
+  <div class="right-side" id="right">
+    <div class="top-left"></div>
+    <div class="bottom-left">
+      <div class="right-transition"></div>
+    </div>
+    <div class="right-info"></div>
+  </div>
+</body>
+
+</html>
