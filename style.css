@@ -13,12 +13,13 @@ body {
   width: 100vw;
   display: flex;
   flex-flow: column;
-  overflow-y: auto;
-  overflow-x: hidden;
+  justify-content: center;
+  /* overflow-y: auto; */
+  /* overflow-x: hidden; */
   margin: 0px;
   background-size: cover;
   background-position: center;
-  position: fixed;
+  /* position: fixed; */
   top: 0px;
 }
 
@@ -215,17 +216,17 @@ footer:hover {
 }
 
 article {
-  max-width: 90vw;
-  margin: auto auto;
-  box-shadow: 0px -5px 50px rgba(16, 17, 19, 0.5);
-  text-shadow: 0px 0px 5px rgba(16, 17, 19, 0.5);
-  background-color: rgba(0, 0, 0, 0.71);
-  padding: 8px;
-  width: 512px;
+  /* max-width: 90vw; */
+  /* margin: auto auto; */
+  /* box-shadow: 0px -5px 50px rgba(16, 17, 19, 0.5); */
+  /* text-shadow: 0px 0px 5px rgba(16, 17, 19, 0.5); */
+  /* background-color: rgba(0, 0, 0, 0.71); */
+  width: 80vw;
   border-radius: 4px;
+  margin: 32px auto;
   position: relative;
-  max-height: 60vh;
-  overflow-y: auto;
+  /* max-height: 60vh; */
+  /* overflow-y: auto; */
   -webkit-scrolling: touch;
 }
 
