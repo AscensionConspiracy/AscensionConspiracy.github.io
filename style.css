@@ -15,7 +15,7 @@ body {
   background-image: url(wood.png), linear-gradient(to top, #ada757, rgba(255, 255, 255, 0.6));
   background-blend-mode: darken;
   margin: 0px;
-  background-size: cover;
+  background-size: auto;
   background-attachment: fixed;
   overflow-x: hidden;
   background-position: center;
